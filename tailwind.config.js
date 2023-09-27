@@ -12,15 +12,15 @@ module.exports = {
       "forest",
       /* {
         mytheme: {        
-          "primary": "#d4b3f2",
-          "secondary": "#7cefba",
-          "accent": "#f74cd2",
-          "neutral": "#382c3a",
-          "base-100": "#223749",
-          "info": "#a6bae7",
-          "success": "#60ebbb",
-          "warning": "#fa9919",
-          "error": "#fa2e05",
+          "primary": "#f4b261",
+          "secondary": "#0cc9c3",
+          "accent": "#f26080",
+          "neutral": "#1c1c26",
+          "base-100": "#2d3162",
+          "info": "#1f42e0",
+          "success": "#22b978",
+          "warning": "#f5bd4d",
+ "error": "#e94949",
         },
       }, */
     ]
