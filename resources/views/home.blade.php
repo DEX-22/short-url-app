@@ -29,16 +29,40 @@
 
       const url = document.getElementById('input-url')
       const response = document.getElementById('response-url')
-      
+      function validation (url) {
 
+        const link = url.value
+
+        const hasMoreThanZeroDot = link.split('.').length >= 1
+
+        return hasMoreThanZeroDot
+
+      }
 
       
       function showText(){
         
-        const hostname = url.value.split('.')[1]
+        const isValid = validation(url)
 
-        response.innerText = hostname
+        if(!isValid) return
+
+        const link = url.value
+
+        const hostname = link.split('.').at(-2)
+
+        response.innerText = "https://shortlink.dev/"+hostname
         response.href = url.value
+
+      }
+      async function getShortLink(url){
+
+          const response = await fetch(`/short/${url}`)
+          if(response.status == 200){
+              const result = await response.json()
+              return result
+          }
+
+          throw new Error(response)
 
       }
     </script>
